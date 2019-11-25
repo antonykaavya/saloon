@@ -58,7 +58,7 @@ class ContextThompsonBandit:
             ix = (a == arm).flatten()
             try:
                 self.A_inv[arm], self.theta[arm] = utils.ridge_reg(X[ix, :], y[ix])
-            except Exception, e:
+            except Exception as e:
                 self.log.error('Arm %d is broken: %s.' % (arm, e))
                 raise SystemExit(1)
 
