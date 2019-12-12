@@ -6,7 +6,7 @@ import logging
 import json
 import sqlalchemy
 import ast
-import psycopg2
+import psycopg2cffi as psycopg2
 
 
 class ContextThompsonBandit:
